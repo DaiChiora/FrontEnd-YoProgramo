@@ -1,20 +1,26 @@
 <div class="row">
     <h3>Experiencia laboral</h3>
 </div>
+<div>
+    <button type="button" class="btn btn-outline-light" routerLink="/new-experiencia" *ngIf="isLogged">
+        Nueva Experiencia
+    </button>
+</div>
 <div *ngFor="let experiencia of experiencias">
 <div class="row">
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
         <img src="{{experiencia.imgExp}}" id="logo-unc">
-        <a class="btn btn-primary tooltips"
+        <div *ngIf="isLogged">
+        <a class="btn btn-outline-light"
         data-placement="top"
         data-tooge="tooltip"
-        data-original-title="Edit">Editar
-        <i class="fa fa-pencil"></i></a>
-        <a class="btn btn-secondary tooltips"
+        data-original-title="Edit" routerLink="/edit-experiencia/{{experiencia.idExp}}"><i class="bi bi-pencil-fill"></i></a>
+        <a class="btn btn-outline-danger"
         data-placement="top"
         data-tooge="tooltip"
-        data-original-title="Delete">Borrar
-        <i class="fa fa-pencil"></i></a>
+        data-original-title="Delete" (click)="deleteExperiencia(experiencia.idExp)">
+        <i class="bi bi-trash"></i></a>
+        </div>
     </div>
     <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
         <h5>{{experiencia.fechaExp}}</h5>
