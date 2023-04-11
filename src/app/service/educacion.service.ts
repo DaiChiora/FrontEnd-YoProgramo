@@ -15,15 +15,17 @@ export class EducacionService {
   public getEducacion(): Observable<Educacion[]>{
     return this.http.get<Educacion[]>(this.eduURL+ 'all');
   }
-
+  public detail(idEdu: number): Observable<Educacion>{
+    return this.http.get<Educacion>(this.eduURL+ `detail/${idEdu}`)
+  }
   public addEducacion(educacion:Educacion): Observable<Educacion>{
     return this.http.post<Educacion>(this.eduURL+ 'add',educacion)
   }
-  public updateEducacion(educacion:Educacion): Observable<Educacion>{
-    return this.http.put<Educacion>(this.eduURL+ 'update',educacion)
+  public updateEducacion(idEdu:number, educacion:Educacion): Observable<Educacion>{
+    return this.http.put<Educacion>(this.eduURL+ `update/${idEdu}`,educacion)
   }
-  public deleteEducacion(educacionId:number): Observable<void>{
-    return this.http.delete<void>(this.eduURL+ `delete/${educacionId}`)
+  public deleteEducacion(idEdu:number): Observable<void>{
+    return this.http.delete<void>(this.eduURL+ `delete/${idEdu}`)
   }
 
 
