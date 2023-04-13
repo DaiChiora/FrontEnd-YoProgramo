@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Experiencia } from '../model/experiencia';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class ExperienciaService {
   lista() {
     throw new Error('Method not implemented.');
   }
-  expURL = 'http://localhost:8080/experiencia/';
+  expURL = environment.URL + 'experiencia/';
   
 
   constructor(private http: HttpClient) {}
