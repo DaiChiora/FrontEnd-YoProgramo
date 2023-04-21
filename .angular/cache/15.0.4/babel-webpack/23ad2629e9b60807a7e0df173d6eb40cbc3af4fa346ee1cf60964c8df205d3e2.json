@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Educacion {\n  constructor(tituloEdu, fechaEdu, descEdu, imgEdu) {\n    this.tituloEdu = tituloEdu;\n    this.fechaEdu = fechaEdu;\n    this.descEdu = descEdu;\n    this.imgEdu = imgEdu;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

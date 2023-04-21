@@ -1,7 +1,12 @@
 <div class="container-fluid">
+    <div>
+        <button type="button" class="btn btn-outline-light" routerLink="/edit-usuario/1" *ngIf="isLogged">
+            Editar Usuario
+        </button>
+    </div>
 <div class="row">
     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-        <img src="../../../assets/Foto CV.jpeg" class="img-fluid">
+        <img src="{{usuario.img}}" class="img-fluid">
       <div id="nombreYTitulo">
         <p id="nombre">{{usuario.nombre}} {{usuario.apellido}}</p>
         <p id="titulo">{{usuario.titulo}}</p>
@@ -11,8 +16,7 @@
     <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" id="seccionAcercaDe">
         <span>
             <h3 id="acercaDe">Acerca de mí</h3>
-            <p id="descripcion">Licenciada en Trabajo Social. Actualmente soy doctoranda en Estudios Sociales de América Latina, con una beca Secyt.
-                Me gusta la programación y crear proyectos que tengan que ver con facilitar la cotidianeidad de las personas.
+            <p id="descripcion">{{usuario.descripcion}}
             </p>
         </span>
     </div>
