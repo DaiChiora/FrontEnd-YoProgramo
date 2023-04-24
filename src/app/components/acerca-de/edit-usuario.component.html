@@ -20,9 +20,12 @@
                     <label for="descripcion">Descripción:</label>
                     <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="usuario.descripcion" required>
                 </div>
-                <div class="form group">
+                 <div class="form group">
                     <label for="img">Imagen:</label>
                     <input type="file" class="form-control" id="img" name="img" [(ngModel)]="usuario.img" (change)="uploadImg($event)" accept=".jpg, .jpeg, .png">
+                </div>
+                <div>
+                    <img [src]="imageService.url" alt="" width="200px">
                 </div>
                 <button class="btn btn-outline-light" type="submit">
                     Modificar Usuario

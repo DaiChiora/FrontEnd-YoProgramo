@@ -25,6 +25,9 @@ import { EditEducacionComponent } from './components/experiencia-y-educacion/edi
 import { EditSkillComponent } from './components/porcentajes/edit-skill.component';
 import { NewSkillComponent } from './components/porcentajes/new-skill.component';
 import { EditUsuarioComponent } from './components/acerca-de/edit-usuario.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -57,11 +60,14 @@ import { EditUsuarioComponent } from './components/acerca-de/edit-usuario.compon
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
    
   ],
   providers: [
-    interceptorProvider
+    interceptorProvider,
+    Storage
   ],
   bootstrap: [AppComponent]
 })
