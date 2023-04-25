@@ -35,7 +35,7 @@ export class EditUsuarioComponent implements OnInit{
     })
   }
 
-   uploadImg($event:any){
+  uploadImg($event:any){
     const id = this.activatedRouter.snapshot.params['id'];
     const name = 'perfil_' + id;
   this.imageService.uploadImg($event, name)

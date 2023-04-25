@@ -18,27 +18,21 @@
         </div>
         <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
             <h5>{{educacion.fechaEdu}}</h5>
-            
+
         </div>
-        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <img src="{{educacion.imgEdu}}" id="logo-unc">
-            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <div *ngIf="isLogged">
-                <a class="btn btn-outline-light"
-                data-placement="top"
-                data-tooge="tooltip"
-                data-original-title="Edit" routerLink="/edit-educacion/{{educacion.idEdu}}"><i class="bi bi-pencil-fill"></i></a>
-                <a class="btn btn-outline-danger"
-                data-placement="top"
-                data-tooge="tooltip"
-                data-original-title="Delete" (click)="deleteEducacion(educacion.idEdu)">
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" *ngIf="isLogged">
+
+            <a class="btn btn-outline-light" data-placement="top" data-tooge="tooltip" data-original-title="Edit"
+                routerLink="/edit-educacion/{{educacion.idEdu}}"><i class="bi bi-pencil-fill"></i></a>
+            <a class="btn btn-outline-danger" data-placement="top" data-tooge="tooltip" data-original-title="Delete"
+                (click)="deleteEducacion(educacion.idEdu)">
                 <i class="bi bi-trash"></i></a>
-                </div>
-            </div>
+
         </div>
-
-
-
     </div>
+
+
+
+
 
 </div>
