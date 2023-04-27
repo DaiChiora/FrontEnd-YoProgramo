@@ -1,12 +1,11 @@
 <div class="row">
+<div class="d-flex justify-content-start align-items-center">
     <h3>Habilidades</h3>
-</div>
-<div  *ngIf="isLogged">
-    <button type="button" class="btn btn-outline-light" routerLink="/new-skill">Nueva Habilidad</button>
+    <button *ngIf="isLogged" type="button" class="btn btn-outline-light" routerLink="/new-skill">Nueva Habilidad</button>
 </div>
 <div class="row">
-    <div class="text-center col-xs-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center align-items-center" *ngFor="let skills of skills">
-        <circle-progress 
+    <div class="text-center col-xs-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center align-items-center flex-wrap" *ngFor="let skills of skills">
+        <circle-progress
         [percent]="(skills.porcentaje)" 
         [radius]="100" 
         [outerStrokeWidth]="16" 
@@ -14,14 +13,14 @@
         [title]="(skills.nombreHabilidad)" 
         [showTitle]="true" 
         [showSubtitle]="false"
-        [titleFontSize]="'25px'" 
+        [titleFontSize]="'20px'" 
         [showUnits]="false"
         [outerStrokeColor]="'#60229D '" 
         [innerStrokeColor]="'#FFFFFF '" 
         [animation]="true"
         [animationDuration]="2000">
         </circle-progress>
-        <div *ngIf="isLogged">
+        <div *ngIf="isLogged" class=" col-xs-4 col-sm-4">
             <a class="btn btn-outline-light"
                 data-placement="top"
                 data-tooge="tooltip"
@@ -32,4 +31,5 @@
                 data-original-title="Delete" (click)="delete(skills.id)">
                 <i class="bi bi-trash"></i></a>
         </div>
+    </div>
     </div>

@@ -3,12 +3,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Skills } from '../model/skills';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SkillsService {
-  URL = 'https://portfolio-daichiora.koyeb.app/' + 'habilidades/';
+  URL = environment.URL + 'habilidades/';
 
   constructor(private httpClient : HttpClient) {  }
   public lista(): Observable<Skills[]>{

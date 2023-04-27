@@ -2,10 +2,11 @@
 img {
     border-radius: 100%;
     box-shadow: 3px 3px 3px grey;
-    left: 3%;
+    /* left: 3%;
     top: 58%;
-   position: absolute;
-    max-width: 17%;
+   position: absolute; */
+    max-width: 15rem;
+    transform: translateY(-60%)
 }
 div {
     text-align: center;
@@ -14,13 +15,11 @@ div {
 #nombre {
     font-weight: bold;
 }
-#nombreYTitulo {
-   margin-top: 38%;
-}
+ #nombreYTitulo {
+    align-self: flex-start;
+    transform: translateY(-250%);
+} 
 
-#seccionAcercaDe {
-    margin-top: 4%;
-}
 
 #descripcion {
     padding-top: 15px;
@@ -34,11 +33,8 @@ div {
     img {
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
-        left: 5%;
-        top: 50%;
-        position: absolute;
-        max-width: 20%;
-    }
+        
+     } 
     div {
         text-align: center;
         background-color: rgb(172, 152, 212);
@@ -66,14 +62,10 @@ div {
 }
 
 @media (max-width: 770px) {
-    img {
+     img {
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
-        left: 5%;
-        top: 70%;
-        position: absolute;
-        max-width: 20%;
-    }
+     }
     div {
         text-align: center;
         background-color: rgb(172, 152, 212);
@@ -99,17 +91,18 @@ div {
     }
 }
 @media (max-width: 575px) {
-    img {
+    img { 
         border-radius: 100%;
-        box-shadow: 3px 3px 3px grey;
-        left: 30%;
-        top: 65%;
-        position: absolute;
-        max-width: 35%;
-    }
+        box-shadow: 3px 3px 3px grey; 
+        max-width: 60%;
+     } 
     div {
         text-align: center;
         background-color: rgb(172, 152, 212);
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
     }
     #nombre {
         font-weight: bold;
@@ -133,14 +126,10 @@ div {
     }
 }
 @media (max-width: 400px) {
-    img {
+     img {
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
-        left: 30%;
-        top: 130%;
-        position: absolute;
-        max-width: 35%;
-    }
+    } 
     div {
         text-align: center;
         background-color: rgb(172, 152, 212);
@@ -167,14 +156,10 @@ div {
     }
 }
 @media (max-width: 150px) {
-    img {
+     img {
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
-        left: 30%;
-        top: 130%;
-        position: absolute;
-        max-width: 35%;
-    }
+    } 
     div {
         text-align: center;
         background-color: rgb(172, 152, 212);

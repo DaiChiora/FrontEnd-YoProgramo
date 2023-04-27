@@ -1,36 +1,47 @@
-<div class="container" *ngIf="usuario">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form group">
-                    <label for="nombre">Nombre:</label>
+<section class="vh-100% " style="background-color: rgb(172, 152, 212);">
+    <div class="container py-5 h-100" *ngIf="usuario">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10 d-flex align-items-center justify-content-center">
+                <div class="card d-flex col-md-7 col-lg-10 "
+                    style="border-radius: 1rem; background-color: rgba(238, 235, 242, 0.777);">
+
+                    <div class="card-body p-4 p-lg-5 text-black">
+                        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                            <div class="form-outline mb-4">
+                                <label for="nombre">Nombre:</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="usuario.nombre"
                         required>
-                </div>
-                <div class="form group">
-                    <label for="apellido">Apellido:</label>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label for="apellido">Apellido:</label>
                     <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="usuario.apellido"
                         required>
-                </div>
-                <div class="form group">
-                    <label for="titulo">Título:</label>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label for="titulo">Título:</label>
                     <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="usuario.titulo" required>
-                </div>
-                <div class="form group">
-                    <label for="descripcion">Descripción:</label>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label for="descripcion">Descripción:</label>
                     <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="usuario.descripcion" required>
-                </div>
-                <div class="form group">
-                    <label for="img">Imagen:</label>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label for="img">Imagen:</label>
                     <input type="file" class="form-control" id="img" name="img" [(ngModel)]="usuario.img" (change)="uploadImg($event)" accept=".jpg, .jpeg, .png">
+                            </div>
+                            <div>
+                                <img [src]="imageService.url" alt="" width="200px">
+                            </div>
+                            <div class="pt-1 mb-4 mt-2 d-flex justify-content-end">
+                                <button class="btn btn-dark btn-lg btn-block btn-sm p-2 mt-4" type="submit">
+                                    Modificar Usuario
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div>
-                    <img [src]="imageService.url" alt="" width="200px">
-                </div>
-                <button class="btn btn-outline-light" type="submit">
-                    Modificar Usuario
-                </button>
-            </form>
+            </div>
         </div>
     </div>
-</div>
+</section>
+

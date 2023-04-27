@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { usuario } from '../model/usuario.model';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -9,7 +10,7 @@ import { usuario } from '../model/usuario.model';
 })
 
 export class UsuarioService {
-    URL = 'https://portfolio-daichiora.koyeb.app/' + 'usuario/';
+    URL = environment.URL + 'usuario/';
 
   constructor(private http: HttpClient) { }
 

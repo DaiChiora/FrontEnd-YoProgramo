@@ -28,6 +28,8 @@ import { EditUsuarioComponent } from './components/acerca-de/edit-usuario.compon
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { NewProyectoComponent } from './components/proyectos/new-proyecto.component';
+import { EditarProyectoComponent } from './components/proyectos/editar-proyecto.component';
 
 
 @NgModule({
@@ -51,6 +53,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     EditSkillComponent,
     NewSkillComponent,
     EditUsuarioComponent,
+    NewProyectoComponent,
+    EditarProyectoComponent,
 
     
    

@@ -27,3 +27,13 @@ img {
     display: inline-block;
     text-align: justify;
 }
+.btn {
+    margin: 0.5rem;
+}
+#link {
+    background-color: #60229D;
+}
+#link:hover  {
+    color: #FFFF;
+    transform: scale(1.3);
+}

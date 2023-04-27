@@ -12,7 +12,8 @@ export const environment = {
     authDomain: 'portfolio-daichiora-front.firebaseapp.com',
     messagingSenderId: '573656425427',
   },
-    production: false
+    production: false,
+    URL : 'http://localhost:8080/'
   };
   
   /*

@@ -1,26 +1,22 @@
-<div class="conteiner.fluid">
-
-</div>
 <div class="row">
+<div class="d-flex justify-content-start align-items-center">
     <h3>Educación</h3>
-</div>
-<div>
     <button type="button" class="btn btn-outline-light" routerLink="/new-educacion" *ngIf="isLogged">
         Nueva Educación
     </button>
 </div>
 <div class="conteiner.fluid" *ngFor="let educacion of educaciones">
 
-    <div class="row">
+    <div class="row d-flex justify-content-center align-items-center">
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
             <h4>{{educacion.tituloEdu}}</h4>
             <p>{{educacion.descEdu}}</p>
         </div>
-        <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
-            <h5>{{educacion.fechaEdu}}</h5>
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 d-flex justify-content-center ">
+            <h5 class="d-flex align-items-start pb-4">{{educacion.fechaEdu}}</h5>
 
         </div>
-        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" *ngIf="isLogged">
+        <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1" *ngIf="isLogged">
 
             <a class="btn btn-outline-light" data-placement="top" data-tooge="tooltip" data-original-title="Edit"
                 routerLink="/edit-educacion/{{educacion.idEdu}}"><i class="bi bi-pencil-fill"></i></a>
@@ -31,7 +27,7 @@
         </div>
     </div>
 
-
+</div>
 
 
 
